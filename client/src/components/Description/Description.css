@@ -1,0 +1,9 @@
+.Description-container {
+  display: flex;
+  justify-content: center;
+}
+
+.Description-text {
+  color: darkgray;
+  max-width: 1000px;
+}
