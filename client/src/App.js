@@ -1,5 +1,5 @@
 import './style.css';
-import Image from './components/Image/Image'
+import Images from './components/Images/Images';
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       <h1>Words and Pictures</h1>
       <h2>Blondie</h2>
       
-      <Image number="01"/>
+      <Images/>
     </div>
   );
 }
