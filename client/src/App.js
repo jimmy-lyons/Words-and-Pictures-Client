@@ -5,10 +5,9 @@ function App() {
   return (
     <div className="App">
       <h1>Words and Pictures</h1>
-      <h2>Blondie
-      </h2>
+      <h2>Blondie</h2>
       
-      <Image/>
+      <Image number="01"/>
     </div>
   );
 }

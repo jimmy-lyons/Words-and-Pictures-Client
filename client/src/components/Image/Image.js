@@ -1,8 +1,9 @@
+import React from 'react';
 import './Image.css';
 
-function Image() {
+function Image(props) {
   return (
-    <img src={require('../../project-images/blondie/Blondie.01.jpg')} class="Image" alt="Blondie1"/>
+    <img src={require(`../../project-images/blondie/Blondie.${props.number}.jpg`)} class="Image" alt="Blondie1"/>
   )
 }
 
