@@ -3,7 +3,7 @@ import React from "react";
 function ProjectListInstance (props) {
   return (
     <p>
-      { props.name + " / " + props.title + " / " + props.client}
+      { props.name + " / " + props.heading + " / " + props.client}
     </p>
   )
 }
