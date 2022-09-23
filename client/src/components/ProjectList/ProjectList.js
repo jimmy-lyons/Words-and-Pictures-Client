@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './ProjectList.css';
 import * as endpoints from '../../endpoints'
+import ProjectListInstance from "./ProjectListIstance/ProjectListInstance";
 
 function ProjectList (props) {
 
@@ -19,12 +20,16 @@ function ProjectList (props) {
   useEffect(() => {
     getProjectData().then((data) => {
       setProjectData(data)
+      console.log(data)
     })
   }, [])
 
   let projects = projectsData.map((project) => {
     return (
-      <p>{ project.name }</p>
+      <ProjectListInstance
+        key={project.id}
+        {...project}
+      />
     )
   })
 
