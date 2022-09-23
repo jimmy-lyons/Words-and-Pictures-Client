@@ -29,9 +29,9 @@ function ProjectList (props) {
   })
 
   return (
-    <>
+    <div>
       { projects }
-    </>
+    </div>
   )
 }
 
