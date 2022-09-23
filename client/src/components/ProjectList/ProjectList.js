@@ -5,7 +5,6 @@ import * as endpoints from '../../endpoints'
 function ProjectList (props) {
 
   const [projectsData, setProjectData] = useState([])
-  let projects = []
   
   const getProjectData = async() => {
     try {
@@ -16,19 +15,14 @@ function ProjectList (props) {
     }
   }
 
-  // React is looping infinitely without this
-  // Even though projectsData only changes once, React is doing an infinite loop
-  let stop = false
-
+  // Renders the project data once
   useEffect(() => {
     getProjectData().then((data) => {
       setProjectData(data)
-      stop = true
-      console.log(projectsData)
     })
-  }, [stop])
+  }, [])
 
-  projects = projectsData.map((project) => {
+  let projects = projectsData.map((project) => {
     return (
       <p>{ project.name }</p>
     )

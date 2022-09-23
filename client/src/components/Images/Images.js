@@ -13,7 +13,6 @@ function Images () {
     )
   })
 
-  console.log(imageArray)
   return (
     <div>
       { imageArray }
