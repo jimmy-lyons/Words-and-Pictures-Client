@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from "react";
+
 import './style.css';
+
 import Images from './components/Images/Images';
 import Description from './components/Description/Description';
 import ProjectList from './components/ProjectList/ProjectList';
+
 import * as endpoints from './endpoints'
+
+
 
 function App() {
 
@@ -12,7 +17,10 @@ function App() {
       name: "",
       heading: "",
       client: ""
-    }])
+    }
+  ])
+
+  const [selectedProject, setSelectedProject] = useState({ 'id': 1 })
 
   const getProjectData = async() => {
     try {
@@ -46,7 +54,9 @@ function App() {
         description={ projectsData[0].description }
       />
 
-      <Images/>
+      <Images
+        currentProject={ selectedProject }
+      />
 
     </div>
   );

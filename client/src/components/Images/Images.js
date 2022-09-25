@@ -1,14 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './Images.css'
 import Image from "./Image/Image";
 
-function Images () {
-  const imageNumbers = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']
-  const imageArray = imageNumbers.map((imgNo) => {
+import * as endpoints from '../../endpoints'
+
+function Images (props) {
+  
+  const [imageData, setImageData ] = useState([{
+      'id': 0,
+      'projectId': 0,
+      'image': ""
+    }
+  ])
+
+  const getProjectImages = async() => {
+    try {
+      const { data } = await endpoints.fetchProjectImages()
+      return data
+    } catch (error) {
+      console.log("Error when fetching project images: ", error)
+    }
+  }
+
+  useEffect(() => {
+    getProjectImages().then((data) => {
+      setImageData(data)
+      console.log(data)
+    })
+  }, [props.currentProject])
+
+  const imageArray = imageData.map((image) => {
     return (
       <Image 
-      key={imgNo}
-      number={imgNo}
+      { ... image }
       />
     )
   })
