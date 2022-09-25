@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Words and Pictures</h1>
+      <h1>ImageMusicText</h1>
       <ProjectList/>
       <h2>Blondie</h2>
       <Description
