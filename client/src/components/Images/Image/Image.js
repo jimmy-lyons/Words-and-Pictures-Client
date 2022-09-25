@@ -3,7 +3,7 @@ import './Image.css';
 
 function Image (props) {
   return (
-    <img src={ 'localhost:8000' + props.image } className="Image" alt="project"/>
+    <img src={ 'http://localhost:8000' + props.image } className="Image" alt="project"/>
   )
 }
 
