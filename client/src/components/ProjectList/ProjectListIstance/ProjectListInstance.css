@@ -7,11 +7,13 @@
   text-align: left;
   padding-left: 10px;
   padding-bottom: 3px;
+  font-family: sans-serif;
 }
 
 .client-sub-instance-container {
   text-align: left;
-  padding-left: 10px;
+  padding-left: 15px;
   color: rgb(167, 167, 167);
   padding-bottom: 3px;
+  font-family: sans-serif;
 }

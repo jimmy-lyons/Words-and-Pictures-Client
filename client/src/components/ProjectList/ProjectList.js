@@ -35,7 +35,10 @@ function ProjectList (props) {
 
   return (
     <div>
-      { projects }
+      <h2>Projects</h2>
+      <div className="project-list-container">
+        { projects }
+      </div>
     </div>
   )
 }
