@@ -13,9 +13,6 @@ function ProjectListInstance (props) {
       <div className="project-list-sub-instance-container">
         { props.heading }
       </div>
-      {/* <div className="project-list-sub-instance-container">
-        { " / " }
-      </div> */}
       <div className="client-sub-instance-container">
         { props.client }
       </div>

@@ -1,20 +1,53 @@
+import React, { useEffect, useState } from "react";
 import './style.css';
 import Images from './components/Images/Images';
 import Description from './components/Description/Description';
 import ProjectList from './components/ProjectList/ProjectList';
+import * as endpoints from './endpoints'
 
 function App() {
-  const stockText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+  const [projectsData, setProjectData] = useState([{
+      id: 0,
+      name: "",
+      heading: "",
+      client: ""
+    }])
+
+  const getProjectData = async() => {
+    try {
+    const { data } = await endpoints.fetchProjects()
+    return data
+    } catch (error) {
+      console.log("Error when fetching projects: ", error)
+    }
+  }
+
+  // Renders the project data once
+  useEffect(() => {
+    getProjectData().then((data) => {
+      setProjectData(data)
+      console.log(data)
+    })
+  }, [])
 
   return (
     <div className="App">
+
       <h1>ImageMusicText</h1>
-      <ProjectList/>
-      <h2>Blondie</h2>
-      <Description
-        text={stockText}
+
+      <ProjectList
+        projectsData={projectsData}
       />
+
+      <h2>{ `${projectsData[0].name} / ${projectsData[0].heading}` }</h2>
+
+      <Description
+        description={ projectsData[0].description }
+      />
+
       <Images/>
+
     </div>
   );
 }
