@@ -15,7 +15,7 @@ function Images (props) {
 
   const getProjectImages = async() => {
     try {
-      const { data } = await endpoints.fetchProjectImages(1)
+      const { data } = await endpoints.fetchProjectImages(props.selectedProject.id)
       return data
     } catch (error) {
       console.log("Error when fetching project images: ", error)
@@ -26,7 +26,7 @@ function Images (props) {
     getProjectImages().then((data) => {
       setImageData(data)
     })
-  }, [props.currentProject])
+  }, [props.selectedProject])
 
   const imageArray = imageData.map((image) => {
     return (

@@ -60,7 +60,7 @@ function App() {
         />
 
         <Images
-          currentProject={ selectedProject }
+          selectedProject={ selectedProject }
         />
       </div>
 
