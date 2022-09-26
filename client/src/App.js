@@ -5,7 +5,6 @@ import './style.css';
 import Header from './components/Header/Header'
 import Images from './components/Images/Images';
 import Description from './components/Description/Description';
-import ProjectList from './components/Header/ProjectList/ProjectList';
 
 import * as endpoints from './endpoints'
 
@@ -14,14 +13,14 @@ import * as endpoints from './endpoints'
 function App() {
 
   const [projectsData, setProjectData] = useState([{
-      id: 0,
+      id: 1,
       name: "",
       heading: "",
       client: ""
     }
   ])
 
-  const [selectedProject, setSelectedProject] = useState({ 'id': 1 })
+  const [selectedProject, setSelectedProject] = useState({ id: 1 })
 
   const getProjectData = async() => {
     try {
@@ -36,24 +35,28 @@ function App() {
   useEffect(() => {
     getProjectData().then((data) => {
       setProjectData(data)
-      console.log(data)
     })
-  }, [])
+  }, [selectedProject])
+
+  // Finds index of selectedProject
+  var index = projectsData.map(function(e) { return e.id; }).indexOf(selectedProject.id);
 
   return (
     <div className="App">
 
       <Header
         projectsData={projectsData}
+        selectedProject={ selectedProject }
+        setSelectedProject={ setSelectedProject }
       />
 
       <div className="content">
         <div className="project-title">
-          { `${projectsData[0].name} / ${projectsData[0].heading}` }
+          { `${projectsData[index].name} / ${projectsData[index].heading}` }
         </div>
 
         <Description
-          description={ projectsData[0].description }
+          description={ projectsData[index].description }
         />
 
         <Images

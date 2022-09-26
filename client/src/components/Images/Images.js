@@ -25,13 +25,13 @@ function Images (props) {
   useEffect(() => {
     getProjectImages().then((data) => {
       setImageData(data)
-      console.log(data)
     })
   }, [props.currentProject])
 
   const imageArray = imageData.map((image) => {
     return (
       <Image 
+      key={ image.id }
       { ... image }
       />
     )

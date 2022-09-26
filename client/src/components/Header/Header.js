@@ -13,6 +13,8 @@ function Header(props) {
         </div>
         <ProjectList
           projectsData={ props.projectsData }
+          selectedProject={ props.selectedProject }
+          setSelectedProject={ props.setSelectedProject }
         />
       </div>
   )

@@ -2,8 +2,14 @@ import React from "react";
 import './ProjectListInstance.css'
 
 function ProjectListInstance (props) {
+
+  const handleClick = (e) => {
+    props.setSelectedProject({id: props.id})
+    console.log("current project id: ", props.selectedProject)
+  }
+
   return (
-    <div className="project-list-instance-container">
+    <div className="project-list-instance-container" id={props.id} onClick={ handleClick }>
       <div className="project-title-sub-instance-container">
         { props.name }
       </div>

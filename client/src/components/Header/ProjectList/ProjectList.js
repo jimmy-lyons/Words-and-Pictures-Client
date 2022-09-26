@@ -7,8 +7,10 @@ function ProjectList (props) {
   let projects = props.projectsData.map((project) => {
     return (
       <ProjectListInstance
-        key={project.id}
-        {...project}
+        key={ project.id }
+        selectedProject={ props.selectedProject }
+        setSelectedProject={ props.setSelectedProject }
+        { ...project }
       />
     )
   })
