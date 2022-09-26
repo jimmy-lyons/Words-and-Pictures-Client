@@ -14,10 +14,12 @@ function ProjectList (props) {
   })
 
   return (
-    <div>
-      <h2>Projects</h2>
-      <div className="project-list-container">
-        {  projects } 
+    <div className="project-list-container">
+      <div className="dropdown">
+        <button className="dropbtn">Projects</button>
+        <div className="dropdown-content">
+          {  projects } 
+        </div>
       </div>
     </div>
   )

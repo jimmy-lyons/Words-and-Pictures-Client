@@ -1,6 +1,10 @@
 .project-list-instance-container {
   display: flex;
   flex-direction: row;
+  padding-left: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 5px;
 }
 
 .project-list-sub-instance-container {

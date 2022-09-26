@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import './style.css';
 
+import Header from './components/Header/Header'
 import Images from './components/Images/Images';
 import Description from './components/Description/Description';
 import ProjectList from './components/ProjectList/ProjectList';
@@ -42,7 +43,7 @@ function App() {
   return (
     <div className="App">
 
-      <h1>ImageMusicText</h1>
+      <Header/>
 
       <ProjectList
         projectsData={projectsData}
