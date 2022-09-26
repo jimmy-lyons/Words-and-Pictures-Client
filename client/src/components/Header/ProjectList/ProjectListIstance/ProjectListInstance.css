@@ -13,6 +13,11 @@
   cursor: pointer;
 }
 
+.project-list-instance-container:active {
+  background-color: white;
+  cursor: pointer;
+}
+
 .project-title-sub-instance-container {
   text-align: left;
   font-weight: bold;
