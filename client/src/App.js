@@ -48,7 +48,9 @@ function App() {
       />
 
       <div className="content">
-        <h2>{ `${projectsData[0].name} / ${projectsData[0].heading}` }</h2>
+        <div className="project-title">
+          { `${projectsData[0].name} / ${projectsData[0].heading}` }
+        </div>
 
         <Description
           description={ projectsData[0].description }

@@ -46,11 +46,20 @@ h1 {
 }
 
 h2 {
-  color:  black;
+  color:  rgb(167, 167, 167);
   text-align: left;
   font-size: 18px;
   font-family: sans-serif;
   padding-left: 15px;
+}
+
+.project-title {
+  color:  rgb(167, 167, 167);
+  text-align: left;
+  font-size: 20px;
+  font-family: sans-serif;
+  padding-left: 15px;
+  padding-top: 15px;
 }
 
 .content {
