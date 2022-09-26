@@ -1,10 +1,16 @@
 import React from "react";
 import './Header.css'
+import ProjectList from "./ProjectList/ProjectList";
 
-function Header() {
+function Header(props) {
   return (
-    <div>
-      <h1>ImageMusicText</h1>
+    <div className="header-container">
+      <div className="title-container">
+        ImageMusicText
+      </div>
+      <ProjectList
+        projectsData={ props.projectsData }
+      />
     </div>
   )
 }

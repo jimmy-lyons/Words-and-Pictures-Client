@@ -5,7 +5,7 @@ import './style.css';
 import Header from './components/Header/Header'
 import Images from './components/Images/Images';
 import Description from './components/Description/Description';
-import ProjectList from './components/ProjectList/ProjectList';
+import ProjectList from './components/Header/ProjectList/ProjectList';
 
 import * as endpoints from './endpoints'
 
@@ -43,21 +43,21 @@ function App() {
   return (
     <div className="App">
 
-      <Header/>
-
-      <ProjectList
+      <Header
         projectsData={projectsData}
       />
 
-      <h2>{ `${projectsData[0].name} / ${projectsData[0].heading}` }</h2>
+      <div className="content">
+        <h2>{ `${projectsData[0].name} / ${projectsData[0].heading}` }</h2>
 
-      <Description
-        description={ projectsData[0].description }
-      />
+        <Description
+          description={ projectsData[0].description }
+        />
 
-      <Images
-        currentProject={ selectedProject }
-      />
+        <Images
+          currentProject={ selectedProject }
+        />
+      </div>
 
     </div>
   );

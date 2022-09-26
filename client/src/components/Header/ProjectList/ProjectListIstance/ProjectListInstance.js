@@ -4,7 +4,7 @@ import './ProjectListInstance.css'
 function ProjectListInstance (props) {
   return (
     <div className="project-list-instance-container">
-      <div className="project-list-sub-instance-container">
+      <div className="project-title-sub-instance-container">
         { props.name }
       </div>
       <div className="project-list-sub-instance-container">

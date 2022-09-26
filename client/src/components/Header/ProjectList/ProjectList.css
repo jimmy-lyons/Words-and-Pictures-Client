@@ -1,8 +1,9 @@
 .project-list-container {
   display: flex;
   flex-direction: row;
-  align-content: left;
-  text-align: left;
+  align-content: right;
+  text-align: right;
+  align-items: flex-end;
 }
 
 /* Style The Dropdown Button */
@@ -12,6 +13,7 @@
   font-weight: bold;
   color: black;
   padding-left: 15px;
+  padding-right: 15px;
   padding-bottom: 5px;
   font-size: 18px;
   border: none;
@@ -26,8 +28,6 @@
 .dropdown {
   position: relative;
   display: inline-block;
-  width: 70%;
-  transition: 1s all;
 }
 
 /* Show the dropdown menu on hover */
@@ -40,7 +40,10 @@
   display: none;
   position: absolute;
   background-color: white;
+  text-align: right;
+  right:10px;
   z-index: 1;
+  width: 700px
 }
 
 /* Links inside the dropdown */
