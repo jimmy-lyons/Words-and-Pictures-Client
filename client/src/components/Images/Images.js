@@ -24,6 +24,7 @@ function Images (props) {
 
   useEffect(() => {
     getProjectImages().then((data) => {
+      console.log("Set image data")
       setImageData(data)
     })
   }, [props.currentProject])

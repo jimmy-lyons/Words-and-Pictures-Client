@@ -5,7 +5,6 @@ function ProjectListInstance (props) {
 
   const handleClick = (e) => {
     props.setSelectedProject({id: props.id})
-    console.log("current project id: ", props.selectedProject)
   }
 
   return (
