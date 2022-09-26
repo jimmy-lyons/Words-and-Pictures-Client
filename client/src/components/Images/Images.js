@@ -15,7 +15,7 @@ function Images (props) {
 
   const getProjectImages = async() => {
     try {
-      const { data } = await endpoints.fetchProjectImages()
+      const { data } = await endpoints.fetchProjectImages(1)
       return data
     } catch (error) {
       console.log("Error when fetching project images: ", error)
@@ -24,7 +24,6 @@ function Images (props) {
 
   useEffect(() => {
     getProjectImages().then((data) => {
-      console.log("Set image data")
       setImageData(data)
     })
   }, [props.currentProject])

@@ -4,4 +4,4 @@ const projectsUrl = "http://localhost:8000/projects/"
 export const fetchProjects = () => axios.get(projectsUrl)
 
 const projectImagesUrl = "http://localhost:8000/projectImages/"
-export const fetchProjectImages = () => axios.post(projectImagesUrl, {id: 1})
+export const fetchProjectImages = (projectId) => axios.post(projectImagesUrl, {id: projectId})
