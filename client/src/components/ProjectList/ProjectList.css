@@ -57,7 +57,7 @@
   text-align: left;
   left:10px;
   z-index: 1;
-  width: 700px
+  width: 700px;
 }
 
 .burger-lines {
@@ -66,4 +66,8 @@
   margin-top: 6px;
   margin-bottom: 6px;
   background-color: black;
+}
+
+.burger-lines:hover {
+  background-color: rgb(167, 167, 167);
 }
