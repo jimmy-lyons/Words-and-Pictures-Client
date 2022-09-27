@@ -18,8 +18,13 @@ function ProjectList (props) {
   return (
     <div className="project-list-container">
       <div className="dropdown">
-        <button className="dropbtn">Projects</button>
+        <button className="dropbtn">
+          <div className="burger-lines"></div>
+          <div className="burger-lines"></div>
+          <div className="burger-lines"></div>
+        </button>
         <div className="dropdown-content">
+          <div className="project-heading">Projects</div>
           {  projects } 
         </div>
       </div>

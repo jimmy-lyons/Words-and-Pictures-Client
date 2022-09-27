@@ -1,3 +1,13 @@
+.project-heading {
+  font-family: sans-serif;
+  color: black;
+  padding-left: 10px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
 .project-list-container {
   position: absolute;
   top: 20px;
@@ -48,4 +58,12 @@
   left:10px;
   z-index: 1;
   width: 700px
+}
+
+.burger-lines {
+  width: 30px;
+  height: 3px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  background-color: black;
 }
