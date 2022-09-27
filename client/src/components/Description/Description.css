@@ -2,8 +2,13 @@
   display: flex;
   justify-content: left;
   text-align: left;
-  padding: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-family: sans-serif;
+  height: 100%;
+  overflow-y: scroll;
 }
 
 /* .Description-text {

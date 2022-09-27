@@ -13,7 +13,7 @@ function Header(props) {
             Music packaging and design by Tony Lyons and Stuart Jones
           </div>
         </div>
-        <div className="right-contianer">
+        <div className="right-container">
 
           <div className="project-title">
             { `${props.projectsData[props.index].name} / ${props.projectsData[props.index].heading}` }
