@@ -41,16 +41,9 @@ function App() {
   return (
     <div className="App">
 
-      <div className="content">
-        <div className="project-title">
-          { `${projectsData[index].name} / ${projectsData[index].heading}` }
-        </div>
-
-
-        <Images
-          selectedProject={ selectedProject }
-        />
-      </div>
+      <Images
+        selectedProject={ selectedProject }
+      />
 
       <Header
         index={ index }
