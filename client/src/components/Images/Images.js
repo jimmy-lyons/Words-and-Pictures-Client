@@ -38,7 +38,7 @@ function Images (props) {
   })
 
   return (
-    <div>
+    <div className="image-container">
       { imageArray }
     </div>
   )

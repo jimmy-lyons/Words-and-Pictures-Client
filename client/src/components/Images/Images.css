@@ -1,0 +1,6 @@
+.image-container {
+  height: 75%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}

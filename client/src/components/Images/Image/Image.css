@@ -1,5 +1,9 @@
 .Image {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 100%
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 2.5px;
+  padding-right: 2.5px;
+  width: auto;
+  height: auto;
+  max-height: 100%;
 }
