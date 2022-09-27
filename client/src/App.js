@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 
 import './style.css';
 
-import Header from './components/Header/Header'
+import Header from './components/Header/Header';
 import Images from './components/Images/Images';
+import ProjectList from "./components/ProjectList/ProjectList";
 
 import * as endpoints from './endpoints'
 
@@ -40,19 +41,22 @@ function App() {
 
   return (
     <div className="App">
-      <div className="main-container">
-        <Images
-          selectedProject={ selectedProject }
-        />
-
-        <Header
-          index={ index }
-          projectsData={projectsData}
+      <ProjectList
+          projectsData={ projectsData }
           selectedProject={ selectedProject }
           setSelectedProject={ setSelectedProject }
         />
-      </div>
 
+      <Images
+        selectedProject={ selectedProject }
+      />
+
+      <Header
+        index={ index }
+        projectsData={projectsData}
+        selectedProject={ selectedProject }
+        setSelectedProject={ setSelectedProject }
+      />
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import './Header.css'
-import ProjectList from "./ProjectList/ProjectList";
 import Description from "../Description/Description";
 
 function Header(props) {
@@ -15,12 +14,7 @@ function Header(props) {
           </div>
         </div>
         <div className="right-contianer">
-          <ProjectList
-            projectsData={ props.projectsData }
-            selectedProject={ props.selectedProject }
-            setSelectedProject={ props.setSelectedProject }
-          />
-          
+
           <div className="project-title">
             { `${props.projectsData[props.index].name} / ${props.projectsData[props.index].heading}` }
           </div>
