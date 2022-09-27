@@ -1,6 +1,5 @@
 .image-container {
-  height: 650px;
-  background-color: aqua;
+  height: 75%;
   overflow-x: scroll;
   white-space: nowrap;
 }

@@ -40,17 +40,18 @@ function App() {
 
   return (
     <div className="App">
+      <div className="main-container">
+        <Images
+          selectedProject={ selectedProject }
+        />
 
-      <Images
-        selectedProject={ selectedProject }
-      />
-
-      <Header
-        index={ index }
-        projectsData={projectsData}
-        selectedProject={ selectedProject }
-        setSelectedProject={ setSelectedProject }
-      />
+        <Header
+          index={ index }
+          projectsData={projectsData}
+          selectedProject={ selectedProject }
+          setSelectedProject={ setSelectedProject }
+        />
+      </div>
 
     </div>
   );
