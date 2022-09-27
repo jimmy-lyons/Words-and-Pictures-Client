@@ -1,6 +1,7 @@
 import React from "react";
 import './Header.css'
 import ProjectList from "./ProjectList/ProjectList";
+import Description from "../Description/Description";
 
 function Header(props) {
   return (
@@ -11,6 +12,9 @@ function Header(props) {
             Music packaging and design by Tony Lyons and Stuart Jones
           </div>
         </div>
+        <Description
+          description={ props.projectsData[props.index].description }
+        />
         <ProjectList
           projectsData={ props.projectsData }
           selectedProject={ props.selectedProject }
