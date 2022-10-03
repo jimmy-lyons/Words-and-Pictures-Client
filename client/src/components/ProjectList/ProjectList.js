@@ -4,6 +4,8 @@ import ProjectListInstance from "./ProjectListIstance/ProjectListInstance";
 
 function ProjectList (props) {
 
+  const [menuIsShown, setMenuIsShown] = useState(false);
+
   let projects = props.projectsData.map((project) => {
     return (
       <ProjectListInstance
@@ -18,15 +20,21 @@ function ProjectList (props) {
   return (
     <div className="project-list-container">
       <div className="dropdown">
-        <button className="dropbtn">
+        <button className="dropbtn"
+          onMouseEnter={() => setMenuIsShown(true)}
+          onMouseLeave={() => setMenuIsShown(false)}
+        >
           <div className="burger-lines"></div>
           <div className="burger-lines"></div>
           <div className="burger-lines"></div>
         </button>
-        <div className="dropdown-content">
-          <div className="project-heading">Projects</div>
-          {  projects } 
-        </div>
+
+        {menuIsShown && (
+          <div className="dropdown-content">
+            <div className="project-heading">Projects</div>
+            {  projects } 
+          </div>
+        )}
       </div>
     </div>
   )

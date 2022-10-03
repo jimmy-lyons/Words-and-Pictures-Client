@@ -10,7 +10,7 @@
 
 .project-list-instance-container:hover {
   background-color: rgb(230, 230, 230);
-  cursor: pointer;
+  cursor: pointer;  
 }
 
 .project-list-instance-container:active {
@@ -24,6 +24,8 @@
   padding-left: 10px;
   padding-bottom: 3px;
   font-family: sans-serif;
+  overflow-x: hidden;
+  white-space: nowrap;
 }
 
 .project-list-sub-instance-container {
@@ -31,6 +33,8 @@
   padding-left: 10px;
   padding-bottom: 3px;
   font-family: sans-serif;
+  overflow-x: hidden;
+  white-space: nowrap;
 }
 
 .client-sub-instance-container {
@@ -39,4 +43,6 @@
   color: rgb(167, 167, 167);
   padding-bottom: 3px;
   font-family: sans-serif;
+  overflow-x: hidden;
+  white-space: nowrap;
 }

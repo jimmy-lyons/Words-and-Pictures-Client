@@ -1,11 +1,11 @@
 .project-heading {
   font-family: sans-serif;
   color: black;
+  font-weight: bold;
   padding-left: 10px;
   padding-right: 15px;
   padding-bottom: 5px;
   font-size: 20px;
-  text-decoration: underline;
 }
 
 .project-list-container {
@@ -14,28 +14,8 @@
   left: 10px;
   display: flex;
   flex-direction: row;
-  /* align-content: right; */
-  /* text-align: right; */
   align-items: flex-start;
   z-index: 1;
-}
-
-/* Style The Dropdown Button */
-.dropbtn {
-  background-color: none;
-  background: none;
-  font-family: sans-serif;
-  color: black;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 5px;
-  font-size: 20px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropdown:hover .dropbtn {
-  text-decoration: underline;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -44,14 +24,20 @@
   display: inline-block;
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
+/* Style The Dropdown Button */
+.dropbtn {
+  background: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  border: none;
+  cursor: pointer;
 }
 
-/* Dropdown Content (Hidden by Default) */
+/* Dropdown Content */
 .dropdown-content {
-  display: none;
+  transition: width 10s;
+  display: block;
   position: absolute;
   background-color: white;
   text-align: left;
@@ -66,8 +52,4 @@
   margin-top: 6px;
   margin-bottom: 6px;
   background-color: black;
-}
-
-.burger-lines:hover {
-  background-color: rgb(167, 167, 167);
 }
