@@ -36,14 +36,28 @@
 
 /* Dropdown Content */
 .dropdown-content {
-  transition: width 10s;
+  /* transition: all 10s; */
   display: block;
   position: absolute;
   background-color: white;
   text-align: left;
   left:10px;
   z-index: 1;
-  width: 700px;
+  animation: 1200ms 1 normal content-expand;
+  animation-fill-mode: forwards;
+}
+
+@keyframes content-expand {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 700px;
+  }
+}
+
+.dropdown-content :focus-visible {
+  background-color: aqua;
 }
 
 .burger-lines {
