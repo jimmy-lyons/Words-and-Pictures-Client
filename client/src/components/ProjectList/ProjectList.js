@@ -30,7 +30,10 @@ function ProjectList (props) {
         </button>
 
         {menuIsShown && (
-          <div className="dropdown-content">
+          <div className="dropdown-content"
+            onMouseEnter={() => setMenuIsShown(true)}
+            onMouseLeave={() => setMenuIsShown(false)}
+          >
             <div className="project-heading">Projects</div>
             {  projects } 
           </div>
