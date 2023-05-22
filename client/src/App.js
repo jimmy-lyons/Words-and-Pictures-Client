@@ -11,19 +11,19 @@ import * as endpoints from './endpoints'
 function App() {
 
   const [projectsData, setProjectData] = useState([{
-      id: 1,
+      id: 53,
       name: "",
       heading: "",
       client: ""
     }
   ])
 
-  const [selectedProject, setSelectedProject] = useState({ id: 1 })
+  const [selectedProject, setSelectedProject] = useState({ id:53 })
 
   const getProjectData = async() => {
     try {
-    const { data } = await endpoints.fetchProjects()
-    return data
+      const { data } = await endpoints.fetchProjects()
+      return data
     } catch (error) {
       console.log("Error when fetching projects: ", error)
     }
