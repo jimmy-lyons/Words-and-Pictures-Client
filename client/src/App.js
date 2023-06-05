@@ -6,7 +6,7 @@ import Header from './components/Header/Header';
 import Images from './components/Images/Images';
 import ProjectList from "./components/ProjectList/ProjectList";
 
-import * as endpoints from './endpoints'
+import projectsJSONObject from './resources/projects.json'
 
 function App() {
 
@@ -20,20 +20,18 @@ function App() {
 
   const [selectedProject, setSelectedProject] = useState({ id: 1 })
 
-  const getProjectData = async() => {
-    try {
-    const { data } = await endpoints.fetchProjects()
-    return data
-    } catch (error) {
-      console.log("Error when fetching projects: ", error)
-    }
-  }
+//  const getProjectData = async() => {
+//    try {
+//    const { data } = await endpoints.fetchProjects()
+//    return data
+//    } catch (error) {
+//      console.log("Error when fetching projects: ", error)
+//    }
+//  }
 
   // Renders the project data once
   useEffect(() => {
-    getProjectData().then((data) => {
-      setProjectData(data)
-    })
+      setProjectData(projectsJSONObject.projects)
   }, [selectedProject])
 
   // Finds index of selectedProject
@@ -53,7 +51,7 @@ function App() {
 
       <Header
         index={ index }
-        projectsData={projectsData}
+        projectsData={projectsData }
         selectedProject={ selectedProject }
         setSelectedProject={ setSelectedProject }
       />
