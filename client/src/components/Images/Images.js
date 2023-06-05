@@ -13,14 +13,10 @@ function Images (props) {
     }
   ])
 
+//  TODO: need to stop page from crashing when there's no info
   const getProjectImages = async() => {
-//    try {
-//      const { data } = await endpoints.fetchProjectImages(props.selectedProject.id)
-//      return data
-//    } catch (error) {
-//      console.log("Error when fetching project images: ", error)
-//    }
-    return imagesJSONObject.blondie
+    const projectKey = `project${props.selectedProject.id}`;
+    return imagesJSONObject[projectKey]
   }
 
   useEffect(() => {
